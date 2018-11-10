@@ -1,0 +1,13 @@
+{% macro liveNews(headlines) %}
+  {% for news in headlines %}
+    <div class="col col-sm-6 col-md-auto col-xs-12 col-lg-auto">
+         <!-- {{news.title}} -->
+      <li class='list-unstyled'>
+        <img src="{{news.urlToImage}}" height='100px' width="200px">
+        <p> {{news.content}}</p>
+        <a href="{{news.url}} "><button class='btn btn-success'>Full story</button></a>
+      </li><hr>
+      <br>
+    </div>
+  {% endfor %}
+{% endmacro %}
