@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import 'macro.html' as macro %}
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href=" {{url_for('static',filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <form class='form-group form-inline'>
+    <input type="text" name='news_search' placeholder="Search for news" class='form-control'>
+    <input type="submit" value='Search' class='btn btn-success'>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h3>News Headlines</h3>
+    <ul>
+      {{macro.liveNews(updates)}} 
+    </ul>
+  </div>
+</div>
+{% endblock %}
