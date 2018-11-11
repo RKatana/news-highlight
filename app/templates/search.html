@@ -8,8 +8,12 @@
 {% block content %}
   <div class="container">
     <div class="row">
-      <h3> Found {{ related| count }} matches </h3>
+      <h3 class="mr"> Found {{ related| count }} matches </h3>
       <hr>
+        <form class='form-group form-inline mr'>
+          <input type="text" name='news_search' placeholder="Search for news" class='form-control'>
+          <input type="submit" value='Search More' class='btn btn-success'>
+        </form>
       <ul>
         {{ macro.liveNews(related)}}  
       </ul>

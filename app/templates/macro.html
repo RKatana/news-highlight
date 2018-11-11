@@ -4,10 +4,25 @@
          <!-- {{news.title}} -->
       <li class='list-unstyled'>
         <img src="{{news.urlToImage}}" height='100px' width="200px">
-        <p> {{news.content}}</p>
-        <a href="{{news.url}} "><button class='btn btn-success'>Full story</button></a>
+        <a href="{{news.url}}"><h3>Source: {{news.name}}</h3></a><hr>
+        <h4 class="text-info">{{news.title}}</h4>
+        <p> {{news.content}} </p>
+        <p class='text-info'>Published at: {{news.publishedAt|truncate(13)}}</p>
+        <a href="{{news.url}}"><button class='btn btn-success'>Full story</button></a>
       </li><hr>
       <br>
     </div>
   {% endfor %}
 {% endmacro %}
+{% macro newSource(tags) %}
+  {% for tag in tags %}
+    <div class="col col-sm-6 col-xs-12 col-md-4 col-lg-4">
+      <li class='list-unstyled'>
+        <h3 class='text-info'>{{tag.name}}</h3>
+        <h4>{{tag.category}}</h4>
+        <p>{{tag.description|truncate(70)}}</p>
+        <a href="{{tag.url}}"><button class='btn btn-success'>View all News</button><br></a>
+      </li><hr><br>
+    </div>
+  {% endfor %}
+{% endmacro%}

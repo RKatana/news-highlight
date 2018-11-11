@@ -2,12 +2,17 @@
 {% import 'macro.html' as macro %}
 {% block styles %}
   {{ super() }}
-  <link rel="stylesheet" href=" {{url_for('static',filename='css/index.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css') }}" type='text/css'>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-  <form class='form-group form-inline'>
+  <div>
+    <h1>Tagged In</h1><br>
+    <hr>
+  </div>
+  <form class='form-group form-inline mr'>
     <input type="text" name='news_search' placeholder="Search for news" class='form-control'>
     <input type="submit" value='Search' class='btn btn-success'>
   </form>
@@ -15,7 +20,7 @@
 
 <div class="container">
   <div class="row">
-    <h3>News Headlines</h3>
+    <h3 class="mr">News Headlines</h3>
     <ul>
       {{macro.liveNews(updates)}} 
     </ul>
