@@ -13,7 +13,12 @@ class News:
         self.content = content
 
 class Sources:
-    def __init__(self,id,name):
-        self.id = id
+    '''
+    This class returns the sources
+    '''
+    def __init__(self,name,description,category,url):
         self.name = name
+        self.description = description
+        self.category = category
+        self.url = url
         
