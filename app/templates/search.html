@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% import 'macro.html' as macro%}
+{% block styles %}
+  {{ super() }}
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css') }}" type='text/css'>
+{% endblock %} 
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h3> Found {{ related| count }} matches </h3>
+      <hr>
+      <ul>
+        {{ macro.liveNews(related)}}  
+      </ul>
+    </div>
+  </div>
+{% endblock %}
