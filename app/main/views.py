@@ -6,14 +6,12 @@ from ..models import News,Sources
 
 @main.route('/')
 def source():
-    # searched = sources.split(" ")
-    # formated = "+".join(searched)
     display_sources = news_sources('formated')
     title = 'Home - Global News Sources'
 
     search_sources = request.args.get('news_search')
     if search_sources:
-        return redirect(url_for('main.source',source=search_sources))
+        return redirect(url_for('main.source',sources=search_sources))
     else:
         return render_template('source.html',source=display_sources,title = title)
 

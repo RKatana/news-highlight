@@ -9,10 +9,6 @@
     {% block content %}
       <div class="container">
         <h1>Tagged In</h1>
-        <form class='form-group form-inline mr'>
-          <input type="text" name='news_search' placeholder="Search for news sources" class='form-control'>
-          <input type="submit" value='Search' class='btn btn-success'>
-        </form>
         <div class="row">
           <ul>
             {{macro.newSource(source)}}
