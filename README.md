@@ -60,7 +60,7 @@ After the operation you will now be able to run the application locally on your 
 
 ### Link to view the app (heroku)
 
-[News Highlight](https://news-higlight.herokuapp.com/)
+[News Highlight](https://newskatana.herokuapp.com/)
 
 ------------------------------------------------------------------------
 
