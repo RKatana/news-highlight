@@ -1,9 +1,13 @@
-li{
+.container{
+  background-color: aliceblue;
+}
+ul li{
   padding-left:10px;
   padding-right:10px;
   box-shadow: 5px -3px 5px grey;
   border: 1px solid grey;
   border-radius:15px;
+  background-color: white;
   
 }
 div.navbar{
@@ -14,6 +18,8 @@ div.navbar{
 li.unstyled{
   box-shadow: none;
   border: none;
+  background-color:rgb(32, 31, 31);
+  border-radius:1px;
 }
 img{
   border-radius: 10px;
@@ -30,7 +36,4 @@ h1{
 .mr{
   position:relative;
   left:5%
-}
-.container{
-  background-color: aliceblue;
 }
